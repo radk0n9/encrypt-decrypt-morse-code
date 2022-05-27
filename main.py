@@ -45,12 +45,17 @@ def decrypt(message):
     return text_word
 
 
-
 def main():
+    print("\nWelcome to Morse Code decryption and encryption program.")
     still_working = True
     while still_working:
+        print("\n############################################\n")
+
         fun = input('For encrypting to Morse Code type "1"\n'
-                    'For decrypting to text type "2"\n')
+                    'For decrypting to text type "2"\n'
+                    'For EXIT from program type "0"\n'
+                    'Your choice: ')
+        print("\n############################################\n")
         if fun == "1":
             text_to_convert = input("Enter text which you want to encrypt to Morse Code: ").upper()
             result = encrypt(text_to_convert)
@@ -67,10 +72,10 @@ def main():
             # print(text_to_decrypt)
             encrypted = decrypt(text_to_decrypt)
             # print(encrypted)
-            print(f"Sentence: {text_in_morse} converted to: {encrypted}")
+            print(f"Sentence: {text_in_morse} converted to: {encrypted}\n")
 
         elif fun == "0":
-            print("Exiting...")
+            print("Exiting... :)")
             still_working = False
         else:
             print("Wrong key, try again.")
